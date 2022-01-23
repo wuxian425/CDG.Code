@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-light.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+  <!-- and it's easy to individually load additional languages -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/html.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <title>COVID-19 Data Getter</title>
+</head>
+<body>
+  <div id="app">
+    <v-app>
+      <v-main>
+        <v-app-bar elevation="3" hide-on-scroll color="primary" dark>
+	       <v-toolbar-title>COVID-19 Data Getter</v-toolbar-title>
+	    </v-app-bar>
+		<v-container>
+            <v-row align="center" justify="center">
+              <v-col class="text-center" cols="12">
+                <!--<h1 class="text-h2 font-weight-bold mb-4" style="margin:50px 0 0 0;">
+                  COVID-19 Data Getter
+                </h1>-->
+				<img src="./src/Logo.svg" width="400px" style="margin:50px 0"/>
+	            <!--<h4 class="text-h8 font-weight-regular mb-4" style="margin:0 0 50px 0;">
+                  一个疫情资讯获取器，用 Scratch 制作。
+                </h4>-->
+				<br/>
+				<v-btn color="primary" elevation="0" outlined href="./demo.html"> 在线预览 </v-btn>
+				<v-btn color="black" elevation="0" outlined href="http://github.com/wuxian425/CDG.Code"> <v-icon color="black">mdi-github</v-icon> Github </v-btn>
+              </v-col>
+            </v-row>
+			<br/>
+	        <h1 class="text-h4 font-weight-bold">介绍</h1>
+			<br/>
+		    <p>COVID-19 Data Getter 是一个简单的，具扩展性的项目，整体使用 <a href="http://turbowarp.org/" style="text-decoration:none;">Turbowarp</a> 进行开发，并使用 <a href="http://packager.turbowarp.org/" style="text-decoration:none;">Turbowarp Packager</a> 进行压缩打包成网页文件。</p>
+			<p>COVID-19 Data Getter 使用 <a href="https://github.com/wuxian425/CDG.Code/blob/main/LICENSE" style="text-decoration:none;">MIT License</a> 进行开源，您可以使用 <a href="https://turbowarp.org/?project_url=raw.githubusercontent.com/wuxian425/CDG.Code/main/COVID-19+Data+Getter+01.22.sb3&extension=https://sheeptester.github.io/hello-world/fetch.js&hqpen&turbo&offscreen" style="text-decoration:none;">Turbowarp + Fetch扩展</a> 进行编辑并打包成网页文件。但是，请遵守 <a href="https://github.com/wuxian425/CDG.Code/blob/main/LICENSE" style="text-decoration:none;">MIT License 规范</a> ，否则我方有权停止开源。</p>
+             <v-divider></v-divider>
+			<br/>
+			<h1 class="text-h4 font-weight-bold">嵌入</h1>
+			<br/>
+			<p>如果您想要把本项目嵌入至您的网站，您只需要在您网站的任何位置贴上以下代码：</p>
+			<pre>
+			<code class="language-html">
+			&lt;iframe src="http://wuxian425.github.io/CDG.Code/demo.html"&gt;&lt;/iframe&gt;
+			</code>
+			</pre>
+			<v-divider></v-divider>
+			<br/>
+			<h1 class="text-h4 font-weight-bold">感谢</h1>
+			<br/>
+			<p>以下为本项目所使用到的开源项目，感谢他们！（排名不分先后）</p>
+			<ul>
+			<ol><a href="https://github.com/CSSEGISandData/COVID-19" style="text-decoration:none;">JHU CSSE COVID-19 Data</a></ol>
+			<ol><a href="https://turbowarp.org/" style="text-decoration:none;">TurboWarp</a></ol>
+			<ol><a href="https://sheeptester.github.io/hello-world/fetch.js" style="text-decoration:none;">Fetch.js</a></ol>
+			<ol><a href="https://scratch.mit.edu/projects/589579521" style="text-decoration:none;">Stamp Font Engine++</a></ol>
+			<ol><a href="https://vuejs.org/" style="text-decoration:none;">Vue.js</a></ol>
+			<ol><a href="https://vuetifyjs.com/" style="text-decoration:none;">Vuetify</a></ol>
+			</ul>
+			<br/>
+			<v-divider></v-divider>
+			<br/>
+			<h1 class="text-h4 font-weight-bold">赞助</h1>
+			<br/>
+			<p>本站为公益用途，不接受任何来源之赞助，Bob在这里感谢你们啦~</p>
+			<br/>
+	    </v-container>
+        <v-footer padless color="primary" dark>
+          <v-col class="text-center" cols="12">
+            {{ new Date().getFullYear() }} — <strong><a href="https://425.1919810.com/" style="color:#FFFFFF; text-decoration:none;">Bob0800</strong>
+          </v-col>
+        </v-footer>
+      </v-main>
+    </v-app>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+    })
+  </script>
+</body>
+</html>
